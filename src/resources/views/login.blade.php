@@ -495,20 +495,24 @@
                   </a>
                            <h2 class="mb-2 text-center">Sign In</h2>
                            <p class="text-center">Sign in to stay connected.</p>
-                           <form>
+                           <form method="POST" action="{{ route('login') }}">
+                              @csrf
                               <div class="row">
                                  <div class="col-lg-12">
                                     <div class="form-group">
                                        <label for="email" class="form-label">Email</label>
-                                       <input type="email" class="form-control form-control-sm" id="email" aria-describedby="email" placeholder=" ">
+                                       <input type="email" class="form-control form-control-sm" name="email" id="email" aria-describedby="email" placeholder=" " required>
                                     </div>
                                  </div>
                                  <div class="col-lg-12">
                                     <div class="form-group">
                                        <label for="password" class="form-label">Password</label>
-                                       <input type="password" class="form-control form-control-sm" id="password" aria-describedby="password" placeholder=" ">
+                                       <input type="password" class="form-control form-control-sm" name="password" id="password" aria-describedby="password" placeholder=" " required>
                                     </div>
                                  </div>
+                                 @if($errors->any())
+                                    <p>{{ $errors->first() }}</p>
+                                 @endif
                                  <div class="col-lg-12 d-flex justify-content-between">
                                     <div class="form-check mb-3">
                                        <input type="checkbox" class="form-check-input" id="customCheck1">
@@ -538,7 +542,7 @@
                                  </ul>
                               </div>
                               <p class="mt-3 text-center">
-                                 Don’t have an account? <a href="sign-up.html" class="text-underline">Click here to sign up.</a>
+                                 Don’t have an account? <a href="register" class="text-underline">Click here to sign up.</a>
                               </p>
                            </form>
                         </div>

@@ -8,13 +8,13 @@
       <title>Aprycot | Responsive Bootstrap 5 Admin Dashboard Template</title>
       
       <!-- Favicon -->
-      <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
+      <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
       
       <!-- Library / Plugin Css Build -->
-      <link rel="stylesheet" href="../../assets/css/core/libs.min.css">
+      <link rel="stylesheet" href="{{ asset('css/core/libs.min.css') }}">
       
       <!-- Custom Css -->
-      <link rel="stylesheet" href="../../assets/css/aprycot.min.css?v=1.0.0">  </head>
+      <link rel="stylesheet" href="{{ asset('css/aprycot.min.css?v=1.0.0') }}">   </head>
   <body class=" " data-bs-spy="scroll" data-bs-target="#elements-section" data-bs-offset="0" tabindex="0">
     <!-- loader Start -->
     <div id="loading">
@@ -495,42 +495,43 @@
                      </a>
                      <h2 class="mb-2 text-center">Sign Up</h2>
                      <p class="text-center">Create your Aprycot account.</p>
-                     <form>
+                     <form method="POST" action="{{ route('register') }}">
+                        @csrf
                         <div class="row">
                            <div class="col-lg-6">
                               <div class="form-group">
-                                 <label for="full-name" class="form-label">Full Name</label>
-                                 <input type="text" class="form-control form-control-sm" id="full-name" placeholder=" ">
+                                 <label for="full-name" class="form-label">First Name</label>
+                                 <input type="text" class="form-control form-control-sm" id="first-name" placeholder=" " name="firstName" required>
                               </div>
                            </div>
                            <div class="col-lg-6">
                               <div class="form-group">
                                  <label for="last-name" class="form-label">Last Name</label>
-                                 <input type="text" class="form-control form-control-sm" id="last-name" placeholder=" ">
+                                 <input type="text" class="form-control form-control-sm" id="last-name" placeholder=" " name="lastName" required>
                               </div>
                            </div>
                            <div class="col-lg-6">
                               <div class="form-group">
                                  <label for="email" class="form-label">Email</label>
-                                 <input type="email" class="form-control form-control-sm" id="email" placeholder=" ">
+                                 <input type="email" class="form-control form-control-sm" id="email" placeholder=" " name="email" required>
                               </div>
                            </div>
                            <div class="col-lg-6">
                               <div class="form-group">
                                  <label for="phone" class="form-label">Phone No.</label>
-                                 <input type="text" class="form-control form-control-sm" id="phone" placeholder=" ">
+                                 <input type="text" class="form-control form-control-sm" id="phone" placeholder=" " name="phone" required>
                               </div>
                            </div>
                            <div class="col-lg-6">
                               <div class="form-group">
                                  <label for="password" class="form-label">Password</label>
-                                 <input type="password" class="form-control form-control-sm" id="password" placeholder=" ">
+                                 <input type="password" class="form-control form-control-sm" id="password" placeholder=" " name="password" required>
                               </div>
                            </div>
                            <div class="col-lg-6">
                               <div class="form-group">
                                  <label for="confirm-password" class="form-label">Confirm Password</label>
-                                 <input type="text" class="form-control form-control-sm" id="confirm-password" placeholder=" ">
+                                 <input type="text" class="form-control form-control-sm" id="confirm-password" placeholder=" " name="password_confirmation" required>
                               </div>
                            </div>
                            <div class="col-lg-12 d-flex justify-content-center">
@@ -540,6 +541,15 @@
                               </div>
                            </div>
                         </div>
+                        @if($errors->any())
+                           <div>
+                              <ul>
+                                 @foreach($errors->all() as $error)
+                                       <li>{{ $error }}</li>
+                                 @endforeach
+                              </ul>
+                           </div>
+                        @endif
                         <div class="d-flex justify-content-center">
                            <button type="submit" class="btn btn-primary">Sign Up</button>
                         </div>
@@ -575,20 +585,20 @@
       </div>
     
     <!-- Required Library Bundle Script -->
-    <script src="../../assets/js/core/libs.min.js"></script>
+    <script src="{{ asset('js/core/libs.min.js') }}"></script>
     
     <!-- External Library Bundle Script -->
-    <script src="../../assets/js/core/external.min.js"></script>
+    <script src="{{ asset('js/core/external.min.js') }}"></script>
     
     <!-- Mapchart JavaScript -->
-    <script src="../../assets/js/charts/dashboard.js"></script>
+    <script src="{{ asset('js/charts/dashboard.js') }}"></script>
     
     <!-- fslightbox JavaScript -->
-    <script src="../../assets/js/fslightbox.js"></script>
+    <script src="{{ asset('js/fslightbox.js') }}"></script>
     
     <!-- app JavaScript -->
-    <script src="../../assets/js/app.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     
     <!-- moment JavaScript -->
-    <script src="../../assets/vendor/moment.min.js"></script>  </body>
+    <script src="{{ asset('vendor/moment.min.js') }}"></script>  </body>
 </html>
