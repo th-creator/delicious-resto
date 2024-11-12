@@ -8,13 +8,13 @@
       <title>Aprycot | Responsive Bootstrap 5 Admin Dashboard Template</title>
       
       <!-- Favicon -->
-      <link rel="shortcut icon" href="./assets/images/favicon.ico" />
+      <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
       
       <!-- Library / Plugin Css Build -->
-      <link rel="stylesheet" href="./assets/css/core/libs.min.css">
+      <link rel="stylesheet" href="{{ asset('css/core/libs.min.css') }}">
       
       <!-- Custom Css -->
-      <link rel="stylesheet" href="./assets/css/aprycot.min.css?v=1.0.0">  </head>
+      <link rel="stylesheet" href="{{ asset('css/aprycot.min.css?v=1.0.0') }}">  </head>
   <body class=" " data-bs-spy="scroll" data-bs-target="#elements-section" data-bs-offset="0" tabindex="0">
     <!-- loader Start -->
     <div id="loading">
@@ -486,7 +486,7 @@
     
       <div class="wrapper">
     <span class="uisheet screen-darken"></span>
-    <div class="header" style="background: url('./assets/images/dashboard.png'); background-size: cover; background-repeat: no-repeat; height: 100vh;position: relative; overflow: hidden;">
+    <div class="header" style="background: url('{{asset('images/dashboard.png')}}'); background-size: cover; background-repeat: no-repeat; height: 100vh;position: relative; overflow: hidden;">
         <div class="position-relative">
             <div class="user-img1 position-absolute">
                 <svg width="1857"  viewBox="0 0 1857 327" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -497,7 +497,7 @@
         </div>
         <div class="main-img">
             <div class="container">
-                <img src="./assets/images/design/banner-logo.svg" class="img-fluid iq-banner-logo">
+                <img src="{{asset('images/design/banner-logo.svg')}}" class="img-fluid iq-banner-logo">
                 <h1 class="my-4">
                     <span>Aprycot - Design System</span>
                 </h1>
@@ -966,7 +966,7 @@
                              </svg>
                          </div>
                          <div class="logo-hover">
-                             <img src="./assets/images/favicon.png" class="img-fluid logo-img" alt="img4">
+                             <img src="{{asset('images/favicon.png')}}" class="img-fluid logo-img" alt="img4">
                          </div>
                          
                          <!--logo End-->
@@ -986,7 +986,7 @@
                                         <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M5.91064 20.5886C5.91064 19.7486 6.59064 19.0686 7.43064 19.0686C8.26064 19.0686 8.94064 19.7486 8.94064 20.5886C8.94064 21.4186 8.26064 22.0986 7.43064 22.0986C6.59064 22.0986 5.91064 21.4186 5.91064 20.5886ZM17.1606 20.5886C17.1606 19.7486 17.8406 19.0686 18.6806 19.0686C19.5106 19.0686 20.1906 19.7486 20.1906 20.5886C20.1906 21.4186 19.5106 22.0986 18.6806 22.0986C17.8406 22.0986 17.1606 21.4186 17.1606 20.5886Z" fill="currentColor"></path>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M20.1907 6.34909C20.8007 6.34909 21.2007 6.55909 21.6007 7.01909C22.0007 7.47909 22.0707 8.13909 21.9807 8.73809L21.0307 15.2981C20.8507 16.5591 19.7707 17.4881 18.5007 17.4881H7.59074C6.26074 17.4881 5.16074 16.4681 5.05074 15.1491L4.13074 4.24809L2.62074 3.98809C2.22074 3.91809 1.94074 3.52809 2.01074 3.12809C2.08074 2.71809 2.47074 2.44809 2.88074 2.50809L5.26574 2.86809C5.60574 2.92909 5.85574 3.20809 5.88574 3.54809L6.07574 5.78809C6.10574 6.10909 6.36574 6.34909 6.68574 6.34909H20.1907ZM14.1307 11.5481H16.9007C17.3207 11.5481 17.6507 11.2081 17.6507 10.7981C17.6507 10.3781 17.3207 10.0481 16.9007 10.0481H14.1307C13.7107 10.0481 13.3807 10.3781 13.3807 10.7981C13.3807 11.2081 13.7107 11.5481 14.1307 11.5481Z" fill="currentColor"></path>
                                     </svg>
-                                    Download
+                                    Sign up
                                 </a>
                             </li>
                         </ul>
@@ -994,13 +994,13 @@
                 </div>
             </nav>
         </div>
-        <img src="./assets/images/design/01.png" class="img-fluid  img-1" alt="img-1"  />
-        <img src="./assets/images/design/02.png" class="img-fluid  img-2" alt="img-2"  />
-        <img src="./assets/images/design/03.png" class="img-fluid  img-3" alt="img-3"  />
-        <img src="./assets/images/design/04.png" class="img-fluid  img-4" alt="img-4"  />
-        <img src="./assets/images/design/05.png" class="img-fluid  img-5" alt="img-5"  />
-        <img src="./assets/images/design/06.png" class="img-fluid  img-6" alt="img-6"  />
-        <img src="./assets/images/design/07.png" class="img-fluid  img-7" alt="img-7"  />
+        <img src="{{asset('images/design/01.png')}}" class="img-fluid  img-1" alt="img-1"  />
+        <img src="{{asset('images/design/02.png')}}" class="img-fluid  img-2" alt="img-2"  />
+        <img src="{{asset('images/design/03.png')}}" class="img-fluid  img-3" alt="img-3"  />
+        <img src="{{asset('images/design/04.png')}}" class="img-fluid  img-4" alt="img-4"  />
+        <img src="{{asset('images/design/05.png')}}" class="img-fluid  img-5" alt="img-5"  />
+        <img src="{{asset('images/design/06.png')}}" class="img-fluid  img-6" alt="img-6"  />
+        <img src="{{asset('images/design/07.png')}}" class="img-fluid  img-7" alt="img-7"  />
     </div>
     <div class=" body-class-1 container">
         <aside class="mobile-offcanvas bd-aside card iq-document-card sticky-xl-top text-muted align-self-start mb-5" id="left-side-bar">
@@ -7088,21 +7088,21 @@
     <!-- Footer Section End -->      </div>
     
     <!-- Required Library Bundle Script -->
-    <script src="./assets/js/core/libs.min.js"></script>
+    <script src="{{ asset('js/core/libs.min.js') }}"></script>
     
     <!-- External Library Bundle Script -->
-    <script src="./assets/js/core/external.min.js"></script>
+    <script src="{{ asset('js/core/external.min.js') }}"></script>
     
     <!-- Mapchart JavaScript -->
-    <script src="./assets/js/charts/dashboard.js"></script>
+    <script src="{{ asset('js/charts/dashboard.js') }}"></script>
     
     <!-- fslightbox JavaScript -->
-    <script src="./assets/js/fslightbox.js"></script>
+    <script src="{{ asset('js/fslightbox.js') }}"></script>
     
     <!-- app JavaScript -->
-    <script src="./assets/js/app.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     
     <!-- moment JavaScript -->
-    <script src="./assets/vendor/moment.min.js"></script>        <script src="./assets/js/prism.mini.js"></script>
+    <script src="{{ asset('vendor/moment.min.js') }}"></script>        <script src="{{asset('js/prism.mini.js')}}"></script>
   </body>
 </html>
