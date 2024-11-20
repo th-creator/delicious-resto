@@ -48,6 +48,6 @@ class RegisterController extends Controller
         Auth::login($user);
 
         // Redirect to the dashboard or wherever you like
-        return redirect()->route('/home');
+            return redirect('/');
     }
 }
