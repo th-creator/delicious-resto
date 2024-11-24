@@ -490,7 +490,7 @@
          <div class="row align-items-center">
             <div class="col-md-12 col-lg-7 col-xl-4">
                <div class="card-body">
-                  <a href="../../dashboard/">
+                  <a href="/">
                      <img src="{{ asset('images/favicon.png') }}" class="img-fluid logo-img" alt="img4">
                   </a>
                            <h2 class="mb-2 text-center">Sign In</h2>

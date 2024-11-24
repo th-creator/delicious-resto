@@ -50,10 +50,11 @@
                 </svg>
             </div>
           </div>
-          
+        
+        @if(Auth::check())
           <aside class="sidebar sidebar-default sidebar-hover sidebar-mini navs-pill-all ">
               <div class="sidebar-header d-flex align-items-center justify-content-start">
-                  <a href="../dashboard/index.html" class="navbar-brand">
+                  <a href="/" class="navbar-brand">
                       <!--Logo start-->
                       <div class="logo">
                           <svg width="40" height="43"  class="" viewBox="0 0 60 63" fill="none" xmlns="http://www.w3.org/200d0/svg">
@@ -547,76 +548,6 @@
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-auth" role="button" aria-expanded="false" aria-controls="sidebar-user">
-                                  <i class="icon">
-                                      <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path opacity="0.4" d="M12.0865 22C11.9627 22 11.8388 21.9716 11.7271 21.9137L8.12599 20.0496C7.10415 19.5201 6.30481 18.9259 5.68063 18.2336C4.31449 16.7195 3.5544 14.776 3.54232 12.7599L3.50004 6.12426C3.495 5.35842 3.98931 4.67103 4.72826 4.41215L11.3405 2.10679C11.7331 1.96656 12.1711 1.9646 12.5707 2.09992L19.2081 4.32684C19.9511 4.57493 20.4535 5.25742 20.4575 6.02228L20.4998 12.6628C20.5129 14.676 19.779 16.6274 18.434 18.1581C17.8168 18.8602 17.0245 19.4632 16.0128 20.0025L12.4439 21.9088C12.3331 21.9686 12.2103 21.999 12.0865 22Z" fill="currentColor"></path>
-                                          <path d="M11.3194 14.3209C11.1261 14.3219 10.9328 14.2523 10.7838 14.1091L8.86695 12.2656C8.57097 11.9793 8.56795 11.5145 8.86091 11.2262C9.15387 10.9369 9.63207 10.934 9.92906 11.2193L11.3083 12.5451L14.6758 9.22479C14.9698 8.93552 15.448 8.93258 15.744 9.21793C16.041 9.50426 16.044 9.97004 15.751 10.2574L11.8519 14.1022C11.7049 14.2474 11.5127 14.3199 11.3194 14.3209Z" fill="currentColor"></path>
-                                      </svg>
-                                  </i>
-                                  <span class="item-name">Authentication</span>
-                                  <i class="right-icon">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                      </svg>
-                                  </i>
-                              </a>
-                              <ul class="sub-nav collapse" id="sidebar-auth" data-bs-parent="#sidebar">
-                                  <li class="nav-item">
-                                      <a class="nav-link" href="{{ route('login') }}">
-                                          <i class="icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                                  <g>
-                                                  <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                                  </g>
-                                              </svg>
-                                          </i>
-                                          <i class="sidenav-mini-icon"> L </i>
-                                          <span class="item-name">Login</span>
-                                      </a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link" href="{{ route('register') }}">
-                                          <i class="icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                                  <g>
-                                                  <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                                  </g>
-                                              </svg>
-                                          </i>
-                                          <i class="sidenav-mini-icon"> R </i>
-                                          <span class="item-name">Register</span>
-                                      </a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link" href="{{route('confirmation')}}">
-                                          <i class="icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                                  <g>
-                                                  <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                                  </g>
-                                              </svg>
-                                          </i>
-                                          <i class="sidenav-mini-icon"> C </i>
-                                          <span class="item-name">Confirm Mail</span>
-                                      </a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link" href="{{route('recovery_password')}}">
-                                         <i class="icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                                  <g>
-                                                  <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                                  </g>
-                                              </svg>
-                                          </i>
-                                          <i class="sidenav-mini-icon"> R </i>
-                                          <span class="item-name">Recover password</span>
-                                      </a>
-                                  </li>
-                              </ul>
-                          </li>
-                          <li class="nav-item">
                               <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-user" role="button" aria-expanded="false" aria-controls="sidebar-user">
                                   <i class="icon">
                                       <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -678,23 +609,23 @@
                               </ul>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" data-bs-toggle="collapse" href="#utilities-error" role="button" aria-expanded="false" aria-controls="utilities-error">
+                              <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-reservation" role="button" aria-expanded="false" aria-controls="sidebar-reservation">
                                   <i class="icon">
-                                      <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path opacity="0.4" d="M11.9912 18.6215L5.49945 21.864C5.00921 22.1302 4.39768 21.9525 4.12348 21.4643C4.0434 21.3108 4.00106 21.1402 4 20.9668V13.7087C4 14.4283 4.40573 14.8725 5.47299 15.37L11.9912 18.6215Z" fill="currentColor"></path>
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.89526 2H15.0695C17.7773 2 19.9735 3.06605 20 5.79337V20.9668C19.9989 21.1374 19.9565 21.3051 19.8765 21.4554C19.7479 21.7007 19.5259 21.8827 19.2615 21.9598C18.997 22.0368 18.7128 22.0023 18.4741 21.8641L11.9912 18.6215L5.47299 15.3701C4.40573 14.8726 4 14.4284 4 13.7088V5.79337C4 3.06605 6.19625 2 8.89526 2ZM8.22492 9.62227H15.7486C16.1822 9.62227 16.5336 9.26828 16.5336 8.83162C16.5336 8.39495 16.1822 8.04096 15.7486 8.04096H8.22492C7.79137 8.04096 7.43991 8.39495 7.43991 8.83162C7.43991 9.26828 7.79137 9.62227 8.22492 9.62227Z" fill="currentColor"></path>
-                                      </svg>
+                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.4" d="M11.9912 18.6215L5.49945 21.864C5.00921 22.1302 4.39768 21.9525 4.12348 21.4643C4.0434 21.3108 4.00106 21.1402 4 20.9668V13.7087C4 14.4283 4.40573 14.8725 5.47299 15.37L11.9912 18.6215Z" fill="currentColor"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.89526 2H15.0695C17.7773 2 19.9735 3.06605 20 5.79337V20.9668C19.9989 21.1374 19.9565 21.3051 19.8765 21.4554C19.7479 21.7007 19.5259 21.8827 19.2615 21.9598C18.997 22.0368 18.7128 22.0023 18.4741 21.8641L11.9912 18.6215L5.47299 15.3701C4.40573 14.8726 4 14.4284 4 13.7088V5.79337C4 3.06605 6.19625 2 8.89526 2ZM8.22492 9.62227H15.7486C16.1822 9.62227 16.5336 9.26828 16.5336 8.83162C16.5336 8.39495 16.1822 8.04096 15.7486 8.04096H8.22492C7.79137 8.04096 7.43991 8.39495 7.43991 8.83162C7.43991 9.26828 7.79137 9.62227 8.22492 9.62227Z" fill="currentColor"></path>
+                                    </svg>
                                   </i>
-                                  <span class="item-name">Utilities</span>
+                                  <span class="item-name">Reservations</span>
                                   <i class="right-icon">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                       </svg>
                                   </i>
                               </a>
-                              <ul class="sub-nav collapse" id="utilities-error" data-bs-parent="#sidebar">
+                              <ul class="sub-nav collapse" id="sidebar-reservation" data-bs-parent="#sidebar">
                                   <li class="nav-item">
-                                      <a class="nav-link " href="../dashboard/errors/error404.html">
+                                      <a class="nav-link " href="{{route('reservations.create')}}">
                                           <i class="icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                   <g>
@@ -702,12 +633,12 @@
                                                   </g>
                                               </svg>
                                           </i>
-                                          <i class="sidenav-mini-icon"> E </i>
-                                          <span class="item-name">Error 404</span>
+                                          <i class="sidenav-mini-icon"> A </i>
+                                          <span class="item-name">Make a Reservation</span>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a class="nav-link " href="../dashboard/errors/error500.html">
+                                      <a class="nav-link " href="{{route('reservations.index')}}">
                                           <i class="icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                   <g>
@@ -715,90 +646,18 @@
                                                   </g>
                                               </svg>
                                           </i>
-                                          <i class="sidenav-mini-icon"> E </i>
-                                          <span class="item-name">Error 500</span>
-                                      </a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link " href="../dashboard/errors/maintenance.html">
-                                          <i class="icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                                  <g>
-                                                  <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                                  </g>
-                                              </svg>
-                                          </i>
-                                          <i class="sidenav-mini-icon"> M </i>
-                                          <span class="item-name">Maintence</span>
+                                          <i class="sidenav-mini-icon"> U </i>
+                                          <span class="item-name">Reservations List</span>
                                       </a>
                                   </li>
                               </ul>
-                          </li>
-                          <li><hr class="hr-horizontal"></li>
-                          <li class="nav-item static-item">
-                              <a class="nav-link static-item disabled" href="#" tabindex="-1">
-                                  <span class="default-icon">Elements</span>
-                                  <span class="mini-icon">-</span>
-                              </a>
-                          </li>
-                          <li class="nav-item sub-nav">
-                              <a class="nav-link " href="../dashboard/icons/dual-tone.html">
-                                  <i class="icon">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" fill="currentColor">
-                                          <path d="M8 10.5378C8 9.43327 8.89543 8.53784 10 8.53784H11.3333C12.4379 8.53784 13.3333 9.43327 13.3333 10.5378V19.8285C13.3333 20.9331 14.2288 21.8285 15.3333 21.8285H16C16 21.8285 12.7624 23.323 10.6667 22.9361C10.1372 22.8384 9.52234 22.5913 9.01654 22.3553C8.37357 22.0553 8 21.3927 8 20.6832V10.5378Z" fill="currentColor"/>
-                                          <rect opacity="0.4" x="8" y="1" width="5" height="5" rx="2.5" fill="currentColor"/>
-                                      </svg>
-                                  </i>
-                                  <span class="item-name">icons</span>
-                                  <i class="sidenav-mini-icon">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" fill="currentColor">
-                                          <path d="M8 10.5378C8 9.43327 8.89543 8.53784 10 8.53784H11.3333C12.4379 8.53784 13.3333 9.43327 13.3333 10.5378V19.8285C13.3333 20.9331 14.2288 21.8285 15.3333 21.8285H16C16 21.8285 12.7624 23.323 10.6667 22.9361C10.1372 22.8384 9.52234 22.5913 9.01654 22.3553C8.37357 22.0553 8 21.3927 8 20.6832V10.5378Z" fill="currentColor"/>
-                                          <rect opacity="0.4" x="8" y="1" width="5" height="5" rx="2.5" fill="currentColor"/>
-                                      </svg>
-                                  </i>
-                              </a>
-                          </li>
-                          <li class="nav-item sub-nav">
-                              <a class="nav-link " href="https://templates.iqonic.design/lite/aprycot/dashboard/html/dist/index.html">
-                                  <i class="icon">
-                                      <svg width="20"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <rect x="1" y="4" width="22" height="16" rx="2.5" fill="currentColor" fill-opacity="0.5"/>
-                                          <path d="M7 8L9.30024 10.8753C9.59242 11.2405 9.59242 11.7595 9.30024 12.1247L7 15" stroke="currentColor" stroke-linecap="round"/>
-                                          <path d="M11.9004 15H16.8004" stroke="currentColor" stroke-linecap="round"/>
-                                      </svg>
-                                  </i>
-                                  <span class="item-name">Components</span>
-                                  <i class="sidenav-mini-icon">
-                                      <svg width="20"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <rect x="1" y="4" width="22" height="16" rx="2.5" fill="currentColor" fill-opacity="0.5"/>
-                                          <path d="M7 8L9.30024 10.8753C9.59242 11.2405 9.59242 11.7595 9.30024 12.1247L7 15" stroke="currentColor" stroke-linecap="round"/>
-                                          <path d="M11.9004 15H16.8004" stroke="currentColor" stroke-linecap="round"/>
-                                      </svg>
-                                  </i>
-                              </a>
-                          </li>
-                          <li class="nav-item sub-nav mb-5">
-                              <a class="nav-link" href="https://templates.iqonic.design/lite/aprycot/documentation/html/dist/main/">
-                                  <i class="icon">
-                                      <svg width="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M3 7.5C3 6.11929 4.11929 5 5.5 5H10.9645C11.6275 5 12.2634 5.26339 12.7322 5.73223L14.5 7.5L16.2678 9.26777C16.7366 9.73661 17 10.3725 17 11.0355V20.5C17 21.8807 15.8807 23 14.5 23H5.5C4.11929 23 3 21.8807 3 20.5V7.5Z" fill="currentColor" fill-opacity="0.5"/>
-                                          <path d="M7 3.5C7 2.11929 8.11929 1 9.5 1H14.9645C15.6275 1 16.2634 1.26339 16.7322 1.73223L18.5 3.5L20.2678 5.26777C20.7366 5.73661 21 6.37249 21 7.03553V16.5C21 17.8807 19.8807 19 18.5 19H9.5C8.11929 19 7 17.8807 7 16.5V3.5Z" fill="currentColor"/>
-                                      </svg>
-                                  </i>
-                                  <span class="item-name">Documentation</span>
-                                  <i class="sidenav-mini-icon">
-                                      <svg width="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M3 7.5C3 6.11929 4.11929 5 5.5 5H10.9645C11.6275 5 12.2634 5.26339 12.7322 5.73223L14.5 7.5L16.2678 9.26777C16.7366 9.73661 17 10.3725 17 11.0355V20.5C17 21.8807 15.8807 23 14.5 23H5.5C4.11929 23 3 21.8807 3 20.5V7.5Z" fill="currentColor" fill-opacity="0.5"/>
-                                          <path d="M7 3.5C7 2.11929 8.11929 1 9.5 1H14.9645C15.6275 1 16.2634 1.26339 16.7322 1.73223L18.5 3.5L20.2678 5.26777C20.7366 5.73661 21 6.37249 21 7.03553V16.5C21 17.8807 19.8807 19 18.5 19H9.5C8.11929 19 7 17.8807 7 16.5V3.5Z" fill="currentColor"/>
-                                      </svg>
-                                  </i>
-                              </a>
                           </li>
                       </ul>
                       <!-- Sidebar Menu End -->        </div>
               </div>
               <div class="sidebar-footer"></div>
           </aside>  
+        @endif  
         @yield('content')
     {{-- </div> --}}
 
@@ -807,8 +666,8 @@
     <footer class="footer">
         <div class="footer-body">
             <ul class="left-panel list-inline mb-0 p-0">
-                <li class="list-inline-item"><a href="../dashboard/extra/privacy-policy.html">Privacy Policy</a></li>
-                <li class="list-inline-item"><a href="../dashboard/extra/terms-of-service.html">Terms of Use</a></li>
+                {{-- <li class="list-inline-item"><a href="../dashboard/extra/privacy-policy.html">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="../dashboard/extra/terms-of-service.html">Terms of Use</a></li> --}}
             </ul>
             <div class="right-panel">
                 ©<script>document.write(new Date().getFullYear())</script> Delecious - لــــذيذ , Made with

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Aprycot | Responsive Bootstrap 5 Admin Dashboard Template</title>
+      <title>Register</title>
       
       <!-- Favicon -->
       <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
@@ -490,9 +490,9 @@
             <div class="col-md-12 col-lg-7 col-xl-4">               
                <div class="d-flex justify-content-center mb-0">
                   <div class="card-body mt-5">
-                     <a href="../../dashboard/">
+                     {{-- <a href="../../dashboard/">
                         <img src="../../assets/images/favicon.png" class="img-fluid logo-img" alt="img5">
-                     </a>
+                     </a> --}}
                      <h2 class="mb-2 text-center">Sign Up</h2>
                      <p class="text-center">Create your Aprycot account.</p>
                      <form method="POST" action="{{ route('register') }}">
@@ -534,12 +534,12 @@
                                  <input type="text" class="form-control form-control-sm" id="confirm-password" placeholder=" " name="password_confirmation" required>
                               </div>
                            </div>
-                           <div class="col-lg-12 d-flex justify-content-center">
+                           {{-- <div class="col-lg-12 d-flex justify-content-center">
                               <div class="form-check mb-3">
                                  <input type="checkbox" class="form-check-input" id="customCheck1">
                                  <label class="form-check-label" for="customCheck1">I agree with the terms of use</label>
                               </div>
-                           </div>
+                           </div> --}}
                         </div>
                         @if($errors->any())
                            <div>
@@ -553,32 +553,15 @@
                         <div class="d-flex justify-content-center">
                            <button type="submit" class="btn btn-primary">Sign Up</button>
                         </div>
-                        <p class="text-center my-3">or sign in with other accounts?</p>
-                        <div class="d-flex justify-content-center">
-                           <ul class="list-group list-group-horizontal list-group-flush">
-                              <li class="list-group-item border-0 pb-0">
-                                 <a href="#"><img src="../../assets/images/brands/gm.svg" alt="gm"></a>
-                              </li>
-                              <li class="list-group-item border-0 pb-0">
-                                 <a href="#"><img src="../../assets/images/brands/fb.svg" alt="fb"></a>
-                              </li>
-                              <li class="list-group-item border-0 pb-0">
-                                 <a href="#"><img src="../../assets/images/brands/im.svg" alt="im"></a>
-                              </li>
-                              <li class="list-group-item border-0 pb-0">
-                                 <a href="#"><img src="../../assets/images/brands/li.svg" alt="li"></a>
-                              </li>
-                           </ul>
-                        </div>
                         <p class="mt-3 text-center">
-                           Already have an Account <a href="sign-in.html" class="text-underline">Sign In</a>
+                           Already have an Account <a href="/login" class="text-underline">Sign In</a>
                         </p>
                      </form>
                   </div>
                </div>          
             </div>  
             <div class="col-md-12 col-lg-5 col-xl-8 d-lg-block d-none vh-100 overflow-hidden">
-               <img src="../../assets/images/auth/09.png" class="img-fluid sign-in-img" alt="images">
+               <img src="{{ asset('images/auth/09.png') }}" class="img-fluid sign-in-img" alt="images">
             </div>
          </div>
       </section>

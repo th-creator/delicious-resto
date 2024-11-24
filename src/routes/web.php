@@ -45,7 +45,7 @@ Route::get('/uadd', function () {
     return view('app/uadd');
 })->name('user_add');
 
-Route::get('/ulist', function () {
+Route::get('/user_list', function () {
     return view('app/ulist');
 })->name('user_list');
 
@@ -56,7 +56,11 @@ Route::get('/uprivacy', function () {
 Route::get('/uprofile', function () {
     return view('app/uprofile');
 })->name('user_profile');
+// Route::get('reservation_add', [ReservationController::class,'create']);
 Route::resource('reservations', ReservationController::class);
+// Route::get('/ulist', function () {
+//     return view('reservation/ulist');
+// })->name('reservation_list');
 
 // Route::get('/login', function () {
 //     return view('login');

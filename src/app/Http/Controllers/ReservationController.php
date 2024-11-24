@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Reservation;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ReservationController extends Controller
 {
@@ -12,9 +13,16 @@ class ReservationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function all()
+    {
+        $reservations = Reservation::with('user')->get();
+
+        return view('reservations.index', compact('reservations'));
+    }
+
     public function index()
     {
-        $reservations = Reservation::with('user')->all();
+        $reservations = Reservation::where('user_id',auth()->id())->get();
 
         return view('reservations.index', compact('reservations'));
     }
@@ -37,16 +45,16 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $reservation = $request->validate([
             'name' => 'required',
-            'state' => 'required',
             'num_person' => 'required',
             'phone' => 'required',
-            'user_id' => 'required',
             'time' => 'required',
         ]);
-
-        Reservation::create($request->all());
+        Log::alert($request->name);
+        $reservation['state'] = 0;
+        $reservation['user_id'] = auth()->id();
+        Reservation::create($reservation);
 
         return redirect()->route('reservations.index')
                         ->with('success','Reservation created successfully.');

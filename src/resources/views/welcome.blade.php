@@ -51,7 +51,7 @@
                         </h1>
                     </div>
                     <p class="mb-4">Get <span class="text-primary">FREE delivery </span>on every weekend.</p>
-                    <button type="button" class="btn btn-primary rounded-pill">Check Menu</button>
+                    <a href="{{ route('reservations.create') }}" class="btn btn-primary rounded-pill">Make a reservation</a>
                 </div>
             </div>
             </div>
