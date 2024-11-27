@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -45,6 +46,7 @@ Route::get('/uadd', function () {
     return view('app/uadd');
 })->name('user_add');
 
+Route::resource('users', UserController::class);
 Route::get('/user_list', function () {
     return view('app/ulist');
 })->name('user_list');
@@ -56,7 +58,7 @@ Route::get('/uprivacy', function () {
 Route::get('/uprofile', function () {
     return view('app/uprofile');
 })->name('user_profile');
-// Route::get('reservation_add', [ReservationController::class,'create']);
+Route::get('all/reservations', [ReservationController::class,'all']);
 Route::resource('reservations', ReservationController::class);
 // Route::get('/ulist', function () {
 //     return view('reservation/ulist');
