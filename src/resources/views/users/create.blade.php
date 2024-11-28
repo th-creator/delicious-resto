@@ -37,7 +37,7 @@
                                  <select class="selectpicker form-control" data-style="py-0" name="time" required>
                                     <option value="" disabled selected>Role</option>
                                     {{-- <option value="admin">Admin</option> --}}
-                                    <option value="employee">Employee</option>
+                                    <option value="admin">Admin</option>
                                     <option value="user">User</option>
                                  </select>
                               </div>

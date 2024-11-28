@@ -531,7 +531,7 @@
                            <div class="col-lg-6">
                               <div class="form-group">
                                  <label for="confirm-password" class="form-label">Confirm Password</label>
-                                 <input type="text" class="form-control form-control-sm" id="confirm-password" placeholder=" " name="password_confirmation" required>
+                                 <input type="password" class="form-control form-control-sm" id="confirm-password" placeholder=" " name="password_confirmation" required>
                               </div>
                            </div>
                            <div class="col-lg-12 d-flex justify-content-center">

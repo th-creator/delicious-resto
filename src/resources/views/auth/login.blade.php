@@ -489,10 +489,12 @@
       <section class="container-fluid bg-circle-login" id="auth-sign">
          <div class="row align-items-center">
             <div class="col-md-12 col-lg-7 col-xl-4">
+                  <div class="d-flex justify-content-center">
+                      <a href="/">
+                         <img src="{{ asset('images/favicon.png') }}" class="img-fluid logo-img" alt="img4">
+                      </a>
+                  </div>
                <div class="card-body">
-                  <a href="../../dashboard/">
-                     <img src="{{ asset('images/favicon.png') }}" class="img-fluid logo-img" alt="img4">
-                  </a>
                            <h2 class="mb-2 text-center">Sign In</h2>
                            <p class="text-center">Sign in to stay connected.</p>
                            <form method="POST" action="{{ route('login') }}">

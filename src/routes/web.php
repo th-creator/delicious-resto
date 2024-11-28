@@ -42,24 +42,16 @@ Route::get('/recovery_password', function () {
     return view('auth/recovery_password');
 })->name('recovery_password');
 
-Route::get('/uadd', function () {
-    return view('app/uadd');
-})->name('user_add');
+Route::middleware(['role:admin'])->group(function () {
+    Route::resource('users', UserController::class);
+    Route::post('toggle/reservations/{id}', [ReservationController::class,'toggle']);
+    Route::get('all/reservations', [ReservationController::class,'all']);
+    Route::resource('reservations', ReservationController::class);
+});
 
-Route::resource('users', UserController::class);
-Route::get('/user_list', function () {
-    return view('app/ulist');
-})->name('user_list');
-
-Route::get('/uprivacy', function () {
-    return view('app/uprivacy');
-})->name('user_privacy');
-
-Route::get('/uprofile', function () {
-    return view('app/uprofile');
-})->name('user_profile');
-Route::get('all/reservations', [ReservationController::class,'all']);
-Route::resource('reservations', ReservationController::class);
+Route::middleware(['role:user'])->group(function () {
+    Route::resource('reservations', ReservationController::class);
+});
 // Route::get('/ulist', function () {
 //     return view('reservation/ulist');
 // })->name('reservation_list');

@@ -105,6 +105,18 @@ class ReservationController extends Controller
         return redirect()->route('reservations.index')
                         ->with('success','Reservation updated successfully');
     }
+    public function toggle(Request $request,$id)
+    {
+        $data = $request->validate([
+            'state' => 'required',
+        ]);
+        
+        Reservation::where('id',$id)->update($data);
+        Log::alert($id);
+
+        return redirect('all/reservations')
+                        ->with('success','Reservation updated successfully');
+    }
 
     /**
      * Remove the specified reservation from storage.
@@ -115,8 +127,12 @@ class ReservationController extends Controller
     public function destroy(Reservation $reservation)
     {
         $reservation->delete();
-
-        return redirect()->route('reservations.index')
-                        ->with('success','Reservation deleted successfully');
+        if (auth()->user()->role == 'user') {
+            return redirect()->route('reservations.index')
+                            ->with('success','Reservation deleted successfully');
+        } else {
+            return redirect('all/reservations')
+                            ->with('success','Reservation deleted successfully');
+        }
     }
 }
